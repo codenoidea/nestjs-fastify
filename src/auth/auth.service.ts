@@ -11,7 +11,7 @@ export class AuthService {
   ) {}
 
   async validateUser(email: string, password: string): Promise<any> {
-    if (email !== 'support@crossteam.co.kr') {
+    if (email !== 'test@test.com') {
       throw new NotFoundException(`이메일 또는 비밀번호를 확인해주세요.`);
     }
     const user = await this.masterUsersService.findEmail(email);
